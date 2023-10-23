@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutería Delicioso</title>
+    <link rel="stylesheet" href="app.component.css">
+    
+</head>
+<body>
+    
+    <header>
+        <h1>Frutería Delicioso</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca">Acerca</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Bienvenido a Frutería Delicioso</h2>
+        <p>Somos tu fuente de frutas frescas y saludables. ¡Ven a visitarnos hoy!</p>
+    </section>
+
+    <section id="acerca">
+        <h2>Acerca del Autor y el Sitio</h2>
+        <p>{{acercade}}</p>
+    </section>
+
+    <section id="productos">
+        <h2>Nuestros Productos</h2>
+        <p>{{productos}}</p>
+        
+        
+        <a routerLink="/precios-frutas">Ver precios de frutas</a>
+       
+
+    </section>
+    <router-outlet></router-outlet>
+
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>{{contacto}}</p>
+        <address>
+            {{direccion[0].calle | json}}<br>
+            {{direccion[0].ciudad | json}}<br>
+            {{direccion[0].telefono | json}}<br>
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Frutería Delicioso - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
